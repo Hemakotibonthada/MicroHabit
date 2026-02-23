@@ -1,0 +1,239 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "mr.hknaidu@gmail.com",
+      "password": "$2a$10$wecRvCdC.masJRGkyjtKd.hlEkE/jIsZVxrq4aLnVh5u4NjkVGK9q",
+      "name": "Hema Koteswara Rao Bonthada",
+      "timezone": "UTC",
+      "preferred_time": "09:00",
+      "is_premium": 0,
+      "current_streak": 0,
+      "longest_streak": 0,
+      "total_actions_completed": 0,
+      "level": 1,
+      "xp": 0,
+      "created_at": "2026-02-22T18:18:32.820Z"
+    },
+    {
+      "id": 2,
+      "email": "test@micro.com",
+      "password": "$2a$10$9Cha2X/9tE.neOlqQVV1t.AKLaG6KFuzTs5nC8QDO06cK./jf/rB6",
+      "name": "Test User",
+      "timezone": "UTC",
+      "preferred_time": "09:00",
+      "is_premium": 0,
+      "current_streak": 1,
+      "longest_streak": 1,
+      "total_actions_completed": 1,
+      "level": 1,
+      "xp": 10,
+      "bio": "",
+      "avatar_color": "#f97316",
+      "created_at": "2026-02-22T18:43:34.696Z"
+    }
+  ],
+  "users_seq": 2,
+  "daily_actions": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "goal_id": null,
+      "category": "health",
+      "action_text": "Do 5 lunges per leg",
+      "duration_seconds": 120,
+      "difficulty": "beginner",
+      "xp_earned": 10,
+      "is_completed": 0,
+      "completed_at": null,
+      "ai_generated": 1,
+      "date": "2026-02-22",
+      "created_at": "2026-02-22T18:18:38.170Z"
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "goal_id": null,
+      "category": "mental",
+      "action_text": "Name 5 things you can see, 4 you can hear, 3 you can touch",
+      "duration_seconds": 120,
+      "difficulty": "beginner",
+      "xp_earned": 10,
+      "is_completed": 0,
+      "completed_at": null,
+      "ai_generated": 1,
+      "date": "2026-02-22",
+      "created_at": "2026-02-22T18:18:38.393Z"
+    },
+    {
+      "id": 3,
+      "user_id": 1,
+      "goal_id": null,
+      "category": "learning",
+      "action_text": "Read one paragraph of a book",
+      "duration_seconds": 120,
+      "difficulty": "beginner",
+      "xp_earned": 10,
+      "is_completed": 0,
+      "completed_at": null,
+      "ai_generated": 1,
+      "date": "2026-02-22",
+      "created_at": "2026-02-22T18:18:38.639Z"
+    },
+    {
+      "id": 4,
+      "user_id": 2,
+      "goal_id": 1,
+      "category": "health",
+      "action_text": "Take 10 deep breaths",
+      "duration_seconds": 120,
+      "difficulty": "beginner",
+      "xp_earned": 10,
+      "is_completed": 1,
+      "completed_at": "2026-02-22T18:44:43.693Z",
+      "skipped": 0,
+      "ai_generated": 1,
+      "date": "2026-02-22",
+      "chain_suggestion": "Hold a plank for 30 seconds",
+      "created_at": "2026-02-22T18:44:38.350Z"
+    }
+  ],
+  "daily_actions_seq": 4,
+  "goals": [
+    {
+      "id": 1,
+      "user_id": 2,
+      "category": "health",
+      "title": "Daily Exercise",
+      "description": "Move every day",
+      "target_description": "",
+      "difficulty": "medium",
+      "color": "#f97316",
+      "is_active": 1,
+      "progress_score": 0,
+      "created_at": "2026-02-22T18:44:34.450Z"
+    }
+  ],
+  "goals_seq": 1,
+  "notifications": [],
+  "notifications_seq": 0,
+  "journal_entries": [
+    {
+      "id": 1,
+      "user_id": 2,
+      "content": "Started my first habits today!",
+      "mood": 8,
+      "category": "health",
+      "tags": [
+        "start",
+        "health"
+      ],
+      "created_at": "2026-02-22T18:44:46.936Z"
+    }
+  ],
+  "journal_entries_seq": 1,
+  "pod_members": [],
+  "pod_members_seq": 0,
+  "challenges": [
+    {
+      "id": 1,
+      "title": "7-Day Health Sprint",
+      "description": "Complete a health action every day for 7 days",
+      "category": "health",
+      "duration_days": 7,
+      "xp_reward": 200,
+      "type": "weekly",
+      "is_active": 1,
+      "participants": 0,
+      "created_at": "2026-02-22T18:44:38.417Z"
+    },
+    {
+      "id": 2,
+      "title": "5-Day Learning Quest",
+      "description": "Complete a learning action every day for 5 days",
+      "category": "learning",
+      "duration_days": 5,
+      "xp_reward": 150,
+      "type": "weekly",
+      "is_active": 1,
+      "participants": 0,
+      "created_at": "2026-02-22T18:44:38.418Z"
+    },
+    {
+      "id": 3,
+      "title": "Social Butterfly",
+      "description": "Complete 10 social actions this month",
+      "category": "social",
+      "duration_days": 30,
+      "xp_reward": 300,
+      "type": "monthly",
+      "is_active": 1,
+      "participants": 0,
+      "created_at": "2026-02-22T18:44:38.419Z"
+    },
+    {
+      "id": 4,
+      "title": "Mindfulness Month",
+      "description": "Complete 20 mental health actions this month",
+      "category": "mental",
+      "duration_days": 30,
+      "xp_reward": 500,
+      "type": "monthly",
+      "is_active": 1,
+      "participants": 0,
+      "created_at": "2026-02-22T18:44:38.419Z"
+    },
+    {
+      "id": 5,
+      "title": "All-Rounder",
+      "description": "Complete actions in every category this week",
+      "category": "all",
+      "duration_days": 7,
+      "xp_reward": 250,
+      "type": "weekly",
+      "is_active": 1,
+      "participants": 0,
+      "created_at": "2026-02-22T18:44:38.420Z"
+    },
+    {
+      "id": 6,
+      "title": "Creative Streak",
+      "description": "Complete 5 creativity actions in a row",
+      "category": "creativity",
+      "duration_days": 14,
+      "xp_reward": 200,
+      "type": "weekly",
+      "is_active": 1,
+      "participants": 0,
+      "created_at": "2026-02-22T18:44:38.420Z"
+    }
+  ],
+  "challenges_seq": 6,
+  "challenge_participants": [],
+  "challenge_participants_seq": 0,
+  "completion_log": [
+    {
+      "id": 1,
+      "user_id": 2,
+      "action_id": 4,
+      "notes": "Felt great!",
+      "mood_before": 5,
+      "mood_after": 8,
+      "difficulty_felt": "",
+      "energy_level": 7,
+      "created_at": "2026-02-22T18:44:43.694Z"
+    }
+  ],
+  "completion_log_seq": 1,
+  "streaks": [
+    {
+      "id": 1,
+      "user_id": 2,
+      "date": "2026-02-22",
+      "actions_completed": 1,
+      "total_actions": 1,
+      "created_at": "2026-02-22T18:44:43.695Z"
+    }
+  ],
+  "streaks_seq": 1
+}
