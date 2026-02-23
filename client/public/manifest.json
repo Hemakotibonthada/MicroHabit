@@ -1,0 +1,24 @@
+{
+  "name": "MicroHabit",
+  "short_name": "MicroHabit",
+  "description": "2-minute micro-actions. Real-life compounding results.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d1117",
+  "theme_color": "#f59e0b",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["health", "lifestyle", "productivity"]
+}
