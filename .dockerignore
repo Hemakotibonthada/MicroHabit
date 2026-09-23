@@ -1,0 +1,6 @@
+node_modules
+.git
+data
+microhabit-data.json
+.env
+client/dist

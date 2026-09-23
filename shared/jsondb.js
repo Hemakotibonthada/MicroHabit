@@ -5,7 +5,26 @@ class JsonDB {
   constructor(filePath) {
     this.filePath = filePath;
     this.data = {};
-    this._load();
+    this.pool = null;
+    this.pending = Promise.resolve();
+  }
+
+  async init() {
+    if (process.env.DATABASE_URL) {
+      const { Pool } = require('pg');
+      this.pool = new Pool({ connectionString: process.env.DATABASE_URL, max: 4 });
+      await this.pool.query(`CREATE TABLE IF NOT EXISTS app_document (
+        id INTEGER PRIMARY KEY CHECK (id = 1),
+        data JSONB NOT NULL DEFAULT '{}'::jsonb,
+        updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+      )`);
+      await this.pool.query("INSERT INTO app_document (id) VALUES (1) ON CONFLICT (id) DO NOTHING");
+      const result = await this.pool.query('SELECT data FROM app_document WHERE id = 1');
+      this.data = result.rows[0]?.data || {};
+    } else {
+      fs.mkdirSync(path.dirname(this.filePath), { recursive: true });
+      this._load();
+    }
   }
 
   _load() {
@@ -17,7 +36,23 @@ class JsonDB {
   }
 
   _save() {
+    if (this.pool) {
+      const snapshot = JSON.stringify(this.data);
+      this.pending = this.pending.catch(() => undefined).then(() => this.pool.query(
+        'UPDATE app_document SET data = $1::jsonb, updated_at = NOW() WHERE id = 1',
+        [snapshot]
+      ));
+      return;
+    }
+    fs.mkdirSync(path.dirname(this.filePath), { recursive: true });
     fs.writeFileSync(this.filePath, JSON.stringify(this.data, null, 2));
+  }
+
+  async flush() { await this.pending; }
+
+  async health() {
+    if (this.pool) await this.pool.query('SELECT 1');
+    else await fs.promises.access(path.dirname(this.filePath), fs.constants.W_OK);
   }
 
   _ensureTable(table) {
