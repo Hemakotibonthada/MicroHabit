@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#65A30D"/>
+      <stop offset="50%" stop-color="#4D7C0F"/>
+      <stop offset="100%" stop-color="#365314"/>
+    </linearGradient>
+    <linearGradient id="glyph" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F7FEE7"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#1A2E05" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="116" fill="url(#bg)"/>
+  <rect x="6" y="6" width="500" height="500" rx="110" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-opacity="0.2"/>
+  <g filter="url(#shadow)">
+    <!-- Circular Habit Progress Track (300 degree arc) -->
+    <path d="M 256 126 A 130 130 0 1 1 164 164" stroke="url(#glyph)" stroke-width="32" stroke-linecap="round" fill="none"/>
+    <!-- Streak Flame in Center -->
+    <path d="M 256 190 C 276 226, 306 250, 306 290 C 306 324, 282 346, 256 346 C 230 346, 206 324, 206 290 C 206 260, 230 236, 256 190 Z" fill="#FACC15"/>
+    <path d="M 256 250 C 266 270, 282 284, 282 306 C 282 324, 270 336, 256 336 C 242 336, 230 324, 230 306 C 230 288, 244 274, 256 250 Z" fill="#F97316"/>
+  </g>
+</svg>
